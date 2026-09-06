@@ -99,6 +99,14 @@ Get a free Gemini API key from [Google AI Studio](https://aistudio.google.com/ap
 
 This project was built as part of Smart India Hackathon (SIH). Contributions and suggestions are welcome via issues or pull requests.
 
+## Team Members
+1. Subham Pattnaik
+2. Jayaprakash Nayak
+3. Anuradha Gajendra
+4. Mansa Rani Sarab
+5. Pritipragnya Singh
+6. Omm Aditya Khadanga
+
 ## License
 
 This project is currently unlicensed. All rights reserved by the contributors.
