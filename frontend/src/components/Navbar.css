@@ -1,0 +1,256 @@
+/* Regalia Navbar Styles */
+.regalia-header {
+  width: 100%;
+  background: #f7f4ef;
+  border-bottom: 1px solid #e5dec9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.announcement-bar {
+  background: #1c1815;
+  color: #e2d1b7;
+  padding: 6px 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  border-bottom: 1px solid #383029;
+}
+
+.announcement-content {
+  width: min(1280px, 94%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topbar-support-btn {
+  background: rgba(180, 83, 9, 0.25);
+  border: 1px solid #b45309;
+  color: #fef3c7;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.topbar-support-btn:hover {
+  background: #b45309;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.4);
+}
+
+.nav-support-link {
+  background: none;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b45309;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.nav-support-link:hover {
+  background: rgba(180, 83, 9, 0.1);
+  color: #78350f;
+}
+
+.nav-chatbot-btn {
+  background: linear-gradient(135deg, #1c1815, #2b251e);
+  border: 1px solid #b45309;
+  color: #fef3c7;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.nav-chatbot-btn:hover {
+  background: #b45309;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.35);
+}
+
+.regalia-navbar {
+  width: min(1280px, 94%);
+  margin: 0 auto;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-icon-box {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #b45309, #78350f);
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', 'Petrona', serif;
+  font-weight: 800;
+  font-size: 22px;
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.3);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: 'Cinzel', 'Petrona', serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #1c1815;
+}
+
+.brand-tagline {
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  color: #857867;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #52473b;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+  color: #b45309;
+  background: rgba(180, 83, 9, 0.08);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-profile-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #e0d6c3;
+  padding: 4px 6px 4px 12px;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.user-role-badge {
+  font-size: 11px;
+  font-weight: 700;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.username-tag {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b251e;
+}
+
+.nav-logout-btn {
+  background: #2b251e;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.nav-logout-btn:hover {
+  background: #92400e;
+}
+
+.auth-nav-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-login-btn {
+  background: transparent;
+  border: 1px solid #b45309;
+  color: #b45309;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-reg-btn {
+  background: #b45309;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .brand-tagline, .nav-links {
+    display: none;
+  }
+}

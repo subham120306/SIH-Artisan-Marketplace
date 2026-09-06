@@ -1,0 +1,180 @@
+/* Luxury Regalia Order Stepper & Order Card Styling */
+
+.regalia-order-card {
+  background: #ffffff;
+  border: 1px solid #e5dec9;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-top: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.regalia-order-card:hover {
+  box-shadow: 0 8px 24px rgba(180, 83, 9, 0.12);
+  border-color: #d4cbb8;
+}
+
+.order-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.order-card-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.order-card-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #e5dec9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.order-card-details h4 {
+  margin: 0 0 4px 0;
+  font-family: 'Petrona', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1815;
+}
+
+.order-card-details p {
+  margin: 0;
+  font-size: 13px;
+  color: #695e52;
+}
+
+.order-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-cancel-btn {
+  background: #fff5f5;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.order-cancel-btn:hover {
+  background: #c53030;
+  color: #ffffff;
+  border-color: #9b2c2c;
+}
+
+/* HORIZONTAL STEPPER */
+.order-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #faf8f5;
+  border: 1px solid #eee5d8;
+  border-radius: 12px;
+  position: relative;
+  margin-top: 4px;
+}
+
+.order-stepper-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.order-stepper-node {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e2d9c8;
+  color: #786d5f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.order-stepper-step.done .order-stepper-node {
+  background: #22c55e;
+  color: #ffffff;
+  border-color: #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.35);
+}
+
+.order-stepper-step.current .order-stepper-node {
+  background: #b45309;
+  color: #ffffff;
+  border-color: #78350f;
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(180, 83, 9, 0.45);
+}
+
+.order-stepper-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8c7e6c;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.order-stepper-step.done .order-stepper-label {
+  color: #166534;
+  font-weight: 700;
+}
+
+.order-stepper-step.current .order-stepper-label {
+  color: #b45309;
+  font-weight: 800;
+}
+
+.order-stepper-line {
+  flex: 1;
+  height: 3px;
+  background: #e2d9c8;
+  margin: 0 -12px 22px -12px;
+  z-index: 1;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.order-stepper-line.filled {
+  background: #22c55e;
+}
+
+/* CANCELLED BADGE */
+.status-pill.cancelled {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}

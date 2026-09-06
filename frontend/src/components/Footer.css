@@ -1,0 +1,212 @@
+/* Regalia Luxury Boutique Footer */
+.regalia-footer {
+  background: #ebe5d9;
+  border-top: 1px solid #dcd4c3;
+  color: #524a41;
+  font-family: 'Outfit', sans-serif;
+  margin-top: 60px;
+  padding-top: 50px;
+}
+
+.regalia-footer-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-col h4 {
+  font-family: 'Petrona', 'Cinzel', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2b251e;
+  margin: 0 0 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #695e52;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #b45309;
+}
+
+/* Logo Column */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.logo-emblem {
+  font-size: 20px;
+  color: #b45309;
+}
+
+.logo-title {
+  font-family: 'Cinzel', 'Petrona', serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #2b251e;
+}
+
+.logo-subtitle {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #857867;
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #695e52;
+  margin-bottom: 20px;
+  max-width: 320px;
+}
+
+/* Newsletter Input */
+.newsletter-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #d4cbb8;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 340px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.newsletter-input {
+  flex: 1;
+  border: none;
+  padding: 12px 14px;
+  font-size: 13px;
+  outline: none;
+  color: #332d26;
+  background: transparent;
+}
+
+.newsletter-btn {
+  background: #b45309;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.newsletter-btn:hover {
+  background: #92400e;
+}
+
+.newsletter-note {
+  font-size: 11px;
+  color: #8c7f70;
+  display: block;
+}
+
+/* Contact Item */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #5c5246;
+  margin-bottom: 12px;
+}
+
+.social-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.social-links a {
+  font-size: 12px;
+  color: #857867;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #b45309;
+}
+
+/* Footer Bottom */
+.regalia-footer-bottom {
+  background: #dfd8c9;
+  border-top: 1px solid #d4cbba;
+  padding: 16px 0;
+}
+
+.bottom-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.payment-badges {
+  display: flex;
+  gap: 8px;
+}
+
+.pay-chip {
+  background: #fff;
+  border: 1px solid #c9c0ae;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4a4237;
+  letter-spacing: 0.5px;
+}
+
+.copyright-text {
+  font-size: 12px;
+  color: #6b6053;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .regalia-footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .regalia-footer-container {
+    grid-template-columns: 1fr;
+  }
+  .bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

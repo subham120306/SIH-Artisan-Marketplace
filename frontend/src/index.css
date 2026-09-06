@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Petrona:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-terracotta: #b45309;
+  --primary-dark: #78350f;
+  --accent-gold: #d97706;
+  --bg-canvas: #f7f4ef;
+  --bg-card: #ffffff;
+  --bg-card-header: #f3efe6;
+  --border-subtle: #e5dec9;
+  --border-strong: #c8bd9f;
+  --text-main: #2b251e;
+  --text-muted: #695e52;
+  --text-light: #8c7f70;
+  
+  --font-serif: 'Petrona', 'Cinzel', Georgia, serif;
+  --font-heading: 'Cinzel', 'Petrona', Georgia, serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background-color: var(--bg-canvas);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: #1c1815;
+  margin-top: 0;
+}
+
+/* Regalia Outline Button Style (matching "Read More" in user reference photo) */
+.regalia-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  border: 1.5px solid #2b251e;
+  color: #2b251e;
+  padding: 10px 20px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25 ease;
+}
+
+.regalia-btn-outline:hover {
+  background: #2b251e;
+  color: #ffffff;
+}
+
+.regalia-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary-terracotta);
+  border: 1px solid var(--primary-dark);
+  color: #ffffff;
+  padding: 10px 20px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(180, 83, 9, 0.25);
+}
+
+.regalia-btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Tag Pill */
+.regalia-tag-pill {
+  display: inline-block;
+  background: #f0e7d8;
+  border: 1px solid #d9cbaf;
+  color: #78350f;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}

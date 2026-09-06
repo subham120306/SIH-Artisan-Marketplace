@@ -1,0 +1,646 @@
+.pdm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 12, 9, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: pdmFadeIn 0.25s ease-out;
+}
+
+@keyframes pdmFadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.pdm-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  max-height: 90vh;
+  background: #fdfbf7;
+  border: 1px solid #e8dfd3;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.pdm-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #d8ccbd;
+  background: #ffffff;
+  color: #5c4e3f;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pdm-close-btn:hover {
+  background: #991b1b;
+  color: #ffffff;
+  border-color: #991b1b;
+}
+
+.pdm-layout-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 28px;
+}
+
+@media (max-width: 860px) {
+  .pdm-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* GALLERY PREVIEW COLUMN */
+.pdm-gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pdm-main-preview {
+  width: 100%;
+  height: 440px;
+  background: #faf6f0;
+  border: 1px solid #e2d7c8;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pdm-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pdm-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #8c7a6b;
+}
+
+/* LUXURY CERTIFICATE CARD (Matching uploaded image) */
+.pdm-certificate-card {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.cert-border-outer {
+  border: 4px double #b45309;
+  padding: 4px;
+  height: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #fffcf8 0%, #fff7ed 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Red-Gold luxury swoosh accents */
+.cert-border-outer::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #991b1b 0%, #78350f 70%, transparent 100%);
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+.cert-border-outer::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, #991b1b 0%, #b45309 70%, transparent 100%);
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+.cert-border-inner {
+  border: 1px solid #d97706;
+  padding: 16px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cert-header-brand {
+  margin-top: 4px;
+}
+
+.cert-logo-mark {
+  font-family: 'Cinzel', serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: #78350f;
+  line-height: 1;
+}
+
+.cert-brand-name {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #1c1917;
+}
+
+.cert-team-subtitle {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #b45309;
+}
+
+.cert-title {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #881337;
+  margin: 10px 0 2px;
+}
+
+.cert-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #1c1917;
+  margin: 0 0 8px;
+}
+
+.cert-divider-line {
+  font-size: 10px;
+  color: #d97706;
+  margin-bottom: 8px;
+}
+
+.cert-award-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #44403c;
+  margin: 4px 0 8px;
+}
+
+.cert-buyer-name-box {
+  background: #fef3c7;
+  border: 1px dashed #d97706;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #78350f;
+  margin-bottom: 8px;
+}
+
+.cert-company-block {
+  margin: 4px 0;
+}
+
+.cert-building-icon {
+  font-size: 14px;
+}
+
+.cert-company-label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #78350f;
+}
+
+.cert-company-name {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #881337;
+}
+
+.cert-appreciation-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 11px;
+  color: #57534e;
+  max-width: 280px;
+  margin: 4px 0 10px;
+}
+
+.cert-footer-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.cert-signature-block {
+  text-align: left;
+}
+
+.cert-signature-line {
+  font-family: 'Sacramento', 'Brush Script MT', cursive;
+  font-size: 20px;
+  color: #1c1917;
+  border-bottom: 1px solid #a8a29e;
+  padding-bottom: 2px;
+}
+
+.cert-signatory-name {
+  font-size: 10px;
+  font-weight: 700;
+  color: #44403c;
+  margin-top: 2px;
+}
+
+.cert-seal-badge {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fbbf24 0%, #d97706 70%, #92400e 100%);
+  border: 2px dashed #fef3c7;
+  box-shadow: 0 4px 10px rgba(180, 83, 9, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.cert-seal-stars {
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.cert-seal-text {
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.cert-physical-notice {
+  text-align: center;
+  font-size: 11px;
+  color: #15803d;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+/* GI CLUSTER VIEW */
+.pdm-cluster-view, .pdm-qr-view {
+  padding: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.pdm-view-badge {
+  display: inline-block;
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.pdm-artisan-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #b45309;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.pdm-cluster-location {
+  color: #78350f;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.pdm-cluster-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.highlight-item {
+  background: #ffffff;
+  border: 1px solid #e7e0d6;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.highlight-item span {
+  display: block;
+  font-size: 11px;
+  color: #786c5e;
+}
+
+.highlight-item strong {
+  font-size: 12px;
+  color: #2b251e;
+}
+
+.pdm-qr-box {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2d7c8;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.pdm-blockchain-hash {
+  background: #1c1917;
+  color: #fbbf24;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+/* THUMBNAIL SELECTOR BAR (FLIPKART STYLE) */
+.pdm-thumbnail-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.pdm-thumb-btn {
+  background: #ffffff;
+  border: 2px solid #e2d7c8;
+  border-radius: 10px;
+  padding: 8px 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  height: 70px;
+  overflow: hidden;
+}
+
+.pdm-thumb-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.pdm-thumb-btn span {
+  font-size: 10px;
+  font-weight: 700;
+  color: #5c4e3f;
+  text-align: center;
+}
+
+.pdm-thumb-btn.active {
+  border-color: #b45309;
+  background: #fffbeb;
+}
+
+.pdm-thumb-btn.active span {
+  color: #b45309;
+}
+
+/* RIGHT COLUMN: DETAILS & ACTIONS */
+.pdm-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pdm-lang-bar {
+  display: flex;
+  gap: 8px;
+}
+
+.pdm-lang-chip {
+  background: #f4efe6;
+  border: 1px solid #ded5c7;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.pdm-lang-chip.active {
+  background: #b45309;
+  color: #fff;
+  border-color: #b45309;
+}
+
+.pdm-title {
+  font-family: 'Petrona', serif;
+  font-size: 22px;
+  color: #2b251e;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.pdm-meta-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+}
+
+.pdm-verified-badge {
+  background: #e3f0e6;
+  color: #2f6f4f;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.pdm-cat-badge {
+  color: #b45309;
+  font-weight: 700;
+}
+
+.pdm-price-box {
+  background: #fdf6ec;
+  border: 1px solid #f9e2c6;
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pdm-price-amount {
+  font-size: 24px;
+  font-weight: 800;
+  color: #78350f;
+}
+
+.pdm-payout-chip {
+  font-size: 11px;
+  color: #166534;
+  font-weight: 700;
+}
+
+.pdm-description {
+  font-size: 13px;
+  color: #5c4e3f;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pdm-qty-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pdm-qty-controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d8ccbd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pdm-qty-controls button {
+  background: #f4efe6;
+  border: none;
+  padding: 6px 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pdm-qty-controls span {
+  padding: 6px 16px;
+  font-weight: bold;
+  background: #fff;
+}
+
+.pdm-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pdm-add-bag-btn {
+  background: #b45309;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(180, 83, 9, 0.3);
+  transition: all 0.2s ease;
+}
+
+.pdm-add-bag-btn:hover {
+  background: #92400e;
+}
+
+.pdm-certificate-btn {
+  background: #ffffff;
+  color: #991b1b;
+  border: 2px solid #991b1b;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.pdm-ask-artisan-section {
+  border-top: 1px solid #e8dfd3;
+  padding-top: 14px;
+}
+
+.pdm-ask-artisan-section h4 {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #b45309;
+  margin: 0 0 8px;
+}
+
+.pdm-ask-form {
+  display: flex;
+  gap: 8px;
+}
+
+.pdm-ask-input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ded5c7;
+  font-size: 12px;
+}
+
+.pdm-ask-btn {
+  background: #2b251e;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
